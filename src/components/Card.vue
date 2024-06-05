@@ -3,6 +3,10 @@ import { ref } from 'vue'
 import ModalWindow from './ModalWindow.vue'
 import { onClickOutside } from '@vueuse/core'
 
+//assets
+import heart1 from '../../public/icons/heart1.png'
+import heart2 from '../../public/icons/heart2.png'
+
 defineProps({
   id: Number,
   title: String,
@@ -51,9 +55,9 @@ onClickOutside(deleteModalRef, closeWindow)
   <div class="card" @mouseenter="mouseOn = true" @mouseleave="mouseOn = false">
     <button @click="openWindow" class="button card__add">+ ADD TO BAG</button>
     <router-link :to="{ path: `/details/${id}` }">
-      <img v-if="!mouseOn" class="card__img" :src="imageUrl1" alt="img" />
+      <img v-if="!mouseOn" class="card__img" loading="lazy" :src="imageUrl1" alt="img" />
 
-      <img v-if="mouseOn" class="card__img" :src="imageUrl2" alt="Card Image" />
+      <img v-if="mouseOn" class="card__img" loading="lazy" :src="imageUrl2" alt="Card Image" />
     </router-link>
     <div class="card__separator">
       <router-link :to="{ path: `/details/${id}` }"
@@ -66,7 +70,7 @@ onClickOutside(deleteModalRef, closeWindow)
         <img
           class="heart"
           @click="onClickFavorite"
-          :src="isFavorite ? '../../public/icons/heart1.png' : '../../public/icons/heart2.png'"
+          :src="isFavorite ? heart1 : heart2"
           alt="Like"
         />
       </div>

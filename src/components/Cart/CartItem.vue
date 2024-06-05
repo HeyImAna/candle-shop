@@ -1,4 +1,7 @@
 <script setup>
+import heart1 from '../../../public/icons/heart1.png'
+import heart2 from '../../../public/icons/heart2.png'
+
 const emit = defineEmits(['onClickRemove'])
 
 defineProps({
@@ -18,7 +21,7 @@ defineProps({
 <template>
   <div class="item">
     <div class="img-wrap">
-      <img class="item__img" :src="imageUrl1" alt="Candle Photo" />
+      <img class="item__img" loading="lazy" :src="imageUrl1" alt="Candle Photo" />
     </div>
 
     <div class="item__info">
@@ -35,7 +38,7 @@ defineProps({
       <img
         @click="onClickFavorite"
         class="item__icons--heart"
-        :src="isFavorite ? '../../public/icons/heart1.png' : '../../public/icons/heart2.png'"
+        :src="isFavorite ? heart1 : heart2"
         alt="Favorite"
       />
       <img

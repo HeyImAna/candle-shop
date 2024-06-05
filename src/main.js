@@ -55,6 +55,7 @@ const vuetify = createVuetify({
 const i18n = createI18n({
   legacy: false,
   locale: document.cookie.split('=')[1],
+  fallbackLocale: 'EN',
   messages: {
     EN: EN,
     RU: RU
