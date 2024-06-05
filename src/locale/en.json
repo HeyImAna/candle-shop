@@ -1,0 +1,26 @@
+{
+  "title": "Pick your candle",
+  "filter": "Filter by",
+  "sort": "Sort by",
+  "top": "Top Rated",
+  "lowest": "Lowest Price",
+  "highest": "Highest Price",
+  "price": "Price",
+  "oil": "Essential Oil",
+  "color": "Color",
+  "material": "Material",
+  "materials": {
+    "paraffin": "Paraffin wax",
+    "soy": "Soy wax",
+    "palm": "Palm wax",
+    "coconut": "Coconut wax"
+  },
+  "account": "MY ACCOUNT",
+  "accInfo": "Account information",
+  "name": "Name",
+  "verified": "Verified",
+  "email": "Email",
+  "linked": "Linked",
+  "payment": "Payment methods",
+  "noPayment": "No payment options found here"
+}

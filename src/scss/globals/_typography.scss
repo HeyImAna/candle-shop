@@ -1,0 +1,73 @@
+@use '../util/index' as u;
+
+:root {
+  --ff-primary: sans-serif;
+  --ff-accent: 'Shippori Mincho B1', serif;
+
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semi-bold: 700;
+}
+
+@media (min-width: 49.98em) {
+  :root {
+    --fs-card-text: 1rem;
+  }
+}
+
+* {
+  font: inherit;
+}
+
+body {
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+h1,
+h2,
+h3 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+//810*0.075 // 1 rem = 16px
+
+h1 {
+  font-size: clamp(u.rem(22), u.rem(14) + 2vw, u.rem(32));
+  font-family: var(--ff-accent);
+  font-weight: var(--fw-medium);
+}
+
+h2 {
+  font-size: clamp(u.rem(20), u.rem(12) + 1vw, u.rem(22));
+  font-family: var(--ff-accent);
+  line-height: 1.2;
+}
+
+h3 {
+  font-size: 1.5rem;
+  letter-spacing: 0.2rem;
+  font-weight: 200;
+  font-family: var(--ff-primary);
+}
+
+p {
+  font-size: 1rem;
+  font-family: var(--ff-primary);
+  margin: 0;
+}
+
+ul,
+ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a,
+a:visited,
+a:active {
+  text-decoration: none;
+  color: var(--clr-secondary-600);
+}

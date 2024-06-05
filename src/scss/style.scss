@@ -1,0 +1,67 @@
+@forward 'globals/index';
+@use './util/index' as u;
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  max-width: u.rem(1920);
+  margin-inline: auto;
+}
+
+.container {
+  --max-width: 1390px;
+  --min-width: 1024px;
+  --padding: 2.5rem;
+
+  width: min(var(--max-width), 100% - (var(--padding) * 2));
+  margin-inline: auto;
+
+  &__separator {
+    display: flex;
+    flex-direction: column;
+    gap: u.rem(40);
+  }
+}
+
+section {
+  padding-bottom: u.rem(40);
+  border-bottom: u.rem(1) solid var(--clr-secondary-500);
+}
+
+.bottomFlex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  div {
+    display: flex;
+    gap: u.rem(15);
+    align-items: center;
+  }
+}
+
+.button {
+  width: 10rem;
+  padding: 1rem;
+  border: u.rem(1) solid var(--clr-secondary-500);
+  background-color: #fff;
+  margin-inline: auto;
+  transition: 0.3s ease-out;
+  cursor: pointer;
+
+  &:hover {
+    background-color: var(--clr-hover);
+  }
+  &:active {
+    background-color: var(--clr-active-button);
+  }
+}
+
+.close {
+  width: u.rem(20);
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.7;
+  }
+}
